@@ -8,27 +8,37 @@
 		<meta name="description" content="" />  
 		<meta name="keywords" content="" />
 		<style type="text/css">
-			div
+			img
 {
-    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto auto;
 }
-div img
+
+.outer
 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: [-50% of your image's width];
-    margin-top: [-50% of your image's height];
+    border: 1px solid #888;
+    width: 100px;
+    height: 100px;
+}
+
+.inner
+{
+    display:table-cell;
+    height: 100px;
+    width: 100px;
+    vertical-align: middle;
 }
 		</style>
 	</head>
 	<body>
-	<div>
+	<div class="outer">
+    <div class="inner">
+        <img src="image.jpg" />
+    </div>
+</div>
 
-	<img src="mockup.jpg" />
-
-
-	</div>
 	
 	</body>
 </html>
