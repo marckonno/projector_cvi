@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Title</title>
+		<title></title>
 		<meta name="language" content="en" />  
 		<meta name="description" content="" />  
 		<meta name="keywords" content="" />
@@ -14,39 +14,12 @@
 		</style>
 	</head>
 	<body>
+	<div style="width:1000px;">
+<div style="margin-left:auto;margin-right:auto;">
+	<img src="mockup.jpg" />
 
-		<?php
-
-		// open this directory 
-		$myDirectory = opendir("images");
-
-		// get each entry
-		while($entryName = readdir($myDirectory)) {
-			$dirArray[] = $entryName;
-		}
-
-		// close directory
-		closedir($myDirectory);
-
-		//	count elements in array
-		$indexCount	= count($dirArray);
-
-		?>
-		
-		<ul>
-
-			<?php
-			// loop through the array of files and print them all in a list
-			for($index=0; $index < $indexCount; $index++) {
-				$extension = substr($dirArray[$index], -3);
-				if ($extension == 'jpg'){ // list only jpgs
-					echo '<li><img src="images/' . $dirArray[$index] . '" alt="Image" /><span>' . $dirArray[$index] . '</span>';
-				}	
-			}
-			?>
-
-		</ul>	
-	
+</div>
+	</div>
 	
 	</body>
 </html>
